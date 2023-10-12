@@ -1,0 +1,55 @@
+@import '/src/assets/abstracts/variables', '/src/assets/abstracts/mixins';
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  background: #fff;
+  .form {
+    flex: 2;
+    border-radius: 30px 0px 0px 30px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 0px 94px 0px rgba(0, 0, 0, 0.60);
+    padding: 4em;
+    background-image: url('/assets/images/dots.png');
+    background-position: bottom;
+    background-size: cover;
+    form {
+      border-radius: 10px;
+      border: 1px solid #E0E0E0;
+      background: #FFF;
+      padding: 3em;
+      .logo {
+        .img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+      .forms-groups {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        label, a.forget-pass {
+          color: #454C52;
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+      .actions-buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        button.primary {
+          @include mainButton($mainGreenColor, #FFF, 100%, 18px 26px, 8px);
+        }
+        button.ordinary {
+          @include mainButton(#fff, #000, 100%, 18px 26px, 8px);
+          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+        }
+      }
+    }
+  }
+  .img {
+    flex: 4;
+  }
+}

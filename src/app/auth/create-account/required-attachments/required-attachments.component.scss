@@ -1,0 +1,15 @@
+@import '/src/assets/abstracts/variables';
+
+.download-attach {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid $mainGreenColor;
+  color: $mainGreenColor;
+  font-weight: 700;
+}
+
+.files { gap: 122px; }
+
+.custom-file-upload { margin-bottom: 2em; }

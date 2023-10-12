@@ -1,0 +1,49 @@
+@import '/src/assets/abstracts/variables';
+
+.box {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+  display: flex;
+  width: 148px;
+  height: 148px;
+  padding: 10px 14px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  span {
+    font-size: 20px;
+    font-weight: 700;
+    color: $mainBlackColor;
+  }
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+ul {
+  li {
+    color: #9EA5AD;
+  }
+}
+
+.divider {
+  display: block;
+  border-left: 2px solid #9EA5AD;
+}
+
+.download-attach {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid $mainGreenColor;
+  color: $mainGreenColor;
+  font-weight: 700;
+}
+
+.files { gap: 122px; }
+
+.custom-file-upload { margin-bottom: 2em; }

@@ -1,0 +1,61 @@
+@import '/src/assets/abstracts/variables';
+
+footer.footer {
+  background: #fff;
+  text-align: right;
+  .footer-container {
+    padding: 3em 4em;
+  }
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h5.title {
+      color: $mainColor;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .list {
+      display: flex;
+      gap: 75px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          .img {
+            width: 40px;
+            height: 40px;
+          }
+          span {
+            font-size: 16px;
+            font-weight: 700;
+            color: $mainBlackColor
+          }
+        }
+      }
+    }
+    h3.hotLine {
+      font-size: 50px;
+      font-weight: 700;
+      color: $mainBlackColor;
+    }
+  }
+  .divider {
+    width: 1px;
+    // height: 386px;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  .copyright-box {
+    padding: 15px 10px;
+    background: $mainColor;
+    color: #fff;
+    text-align: center;
+  }
+}

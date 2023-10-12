@@ -1,0 +1,5 @@
+<div class="main-page">
+    <app-header></app-header>
+    <ng-content></ng-content>
+    <app-footer *ngIf="!currentRoute.toLowerCase().includes('signup')"></app-footer>
+</div>

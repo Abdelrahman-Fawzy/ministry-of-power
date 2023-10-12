@@ -1,0 +1,77 @@
+// Margin utility classes
+
+$sizes: (
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+);
+
+@each $size in $sizes {
+    .m-#{$size} {
+        margin: #{$size}px !important;
+    }
+
+    .mt-#{$size} {
+        margin-top: #{$size}px !important;
+    }
+    
+    .mb-#{$size} {
+        margin-bottom: #{$size}px !important;
+    }
+
+    .mr-#{$size} {
+        margin-right: #{$size}px !important;
+    }
+
+    .ml-#{$size} {
+        margin-left: #{$size}px !important;
+    }
+
+    .mx-#{$size} {
+        margin-left: #{$size}px !important;
+        margin-right: #{$size}px !important;
+    }
+
+    .my-#{$size} {
+        margin-top: #{$size}px !important;
+        margin-bottom: #{$size}px !important;
+    }
+
+    .p-#{$size} {
+        padding: #{$size}px !important;
+    }
+
+    .pt-#{$size} {
+        padding-top: #{$size}px !important;
+    }
+
+    .pb-#{$size} {
+        padding-bottom: #{$size}px !important;
+    }
+
+    .pr-#{$size} {
+        padding-right: #{$size}px !important;
+    }
+
+    .pl-#{$size} {
+        padding-left: #{$size}px !important;
+    }
+
+    .px-#{$size} {
+        padding-left: #{$size}px !important;
+        padding-right: #{$size}px !important;
+    }
+
+    .py-#{$size} {
+        padding-top: #{$size}px !important;
+        padding-bottom: #{$size}px !important;
+    }
+}

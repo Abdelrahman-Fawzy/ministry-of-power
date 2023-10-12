@@ -1,0 +1,19 @@
+@import '/src/assets/abstracts/variables';
+
+.create-account-page {
+  .header {
+    text-align: center;
+    margin: 2em 0;
+    h3.title {
+      font-size: 25px;
+      font-weight: 700;
+      color: $mainBlackColor;
+      margin: 1.4em 0;
+    }
+  }
+  .step-data {
+    background-image: url('/assets/images/dots.png');
+    background-position: center;
+    // background-size: cover;
+  }
+}

@@ -1,0 +1,46 @@
+<div class="login-page">
+  <div class="form center-flex">
+    <form class="full-width flex flex-col ai-c gap-40">
+      <div class="logo">
+        <a routerLink="/">
+          <div class="img">
+            <img src="assets/images/main_assets/logo.svg" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="forms-groups full-width">
+        <div class="form-group">
+          <label for="name">اسم المستخدم</label>
+          <div class="iconic-form-control">
+            <div class="img">
+              <img src="assets/images/icons/envelope.svg" alt="">
+            </div>
+            <input type="text" id="name" placeholder="hussain@finesse.com">
+          </div>
+        </div>
+        <div class="password-and-forget flex flex-col jc-fe gap-10">
+          <div class="form-group">
+            <label for="password">كلمة المرور</label>
+            <div class="iconic-form-control">
+              <div class="img">
+                <img src="assets/images/icons/lock.svg" alt="">
+              </div>
+              <input type="password" id="password" placeholder="******************">
+              <button class="transparent-button view-password">
+                <img src="assets/images/icons/eye.svg" alt="">
+              </button>
+            </div>
+          </div>
+          <a class="forget-pass">نسيت كلمة المرور ؟</a>
+        </div>
+      </div>
+      <div class="actions-buttons">
+        <button class="login primary">تسجيل الدخول</button>
+        <button class="signup ordinary" routerLink="/signup">إنشاء حساب جديد</button>
+      </div>
+    </form>
+  </div>
+  <div class="img">
+    <img src="assets/images/login_image.png" alt="">
+  </div>
+</div>

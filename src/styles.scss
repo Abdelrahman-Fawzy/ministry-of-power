@@ -1,1 +1,107 @@
-/* You can add global styles to this file, and also import other style files */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import './assets/abstracts/main';
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background: #F6F6F6;
+  text-align: right;
+}
+
+.home-slider {
+  .slick-dots {
+    bottom: 10px;
+    li {
+      border-radius: 52.8px;
+      border: 1px solid #EBEBEB;
+      &:not(.slick-active) {
+        button::before { display: none; }
+      }
+      &.slick-active {
+        button::before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          background: #fff;
+          border-radius: 50%;
+          left: 2px;
+          top: 2px;
+          opacity: 1;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.create-account-page {
+  .steps {
+    nav.p-steps {
+      ul {
+        li::before { display: none; }
+        li { 
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          position: relative;
+          a {
+            width: 100%;
+            align-items: center;
+            &:hover {
+              text-decoration: none;
+            }
+            span.p-steps-number {
+              color: $mainBlackColor;
+              border: 2px solid $mainBlackColor;
+              background: #E0E0E0;
+              min-width: 2.5rem;
+              height: 2.5rem;
+              line-height: 2rem;
+              font-size: 16px;
+              z-index: 1;
+              border-radius: 50%;
+              font-weight: 700;
+            }
+            span.p-steps-title {
+              color: $mainBlackColor;
+              font-weight: 700;
+              font-size: 16px;
+            }
+            &.p-menuitem-link-active {
+              span.p-steps-number {
+                border-color: $mainColor;
+                background-color: #FFF;
+                color: $mainColor;
+              }
+              span.p-steps-title {
+                color: $mainColor;
+              }
+            }
+          }
+          &:not(:last-child)::after, &:not(:first-child)::before {
+            content: "";
+            width: 50%;
+            // height: 2px;
+            display: block;
+            background-color: $mainBlackColor;
+            position: absolute;
+            border-top: 2px solid $mainBlackColor;
+          }
+          &:not(:first-child)::before {
+            right: 0;
+            top: 50%;
+          }
+          &:not(:last-child)::after {
+            left: 0;
+            top: 27%;
+          }
+        }
+      }
+    }
+  }
+}

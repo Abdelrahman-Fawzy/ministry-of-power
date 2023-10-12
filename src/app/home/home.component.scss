@@ -1,0 +1,145 @@
+@import '/src/assets/abstracts/variables';
+
+.slider {
+  background-image: url('/assets/images/home/home_header.png');
+  background-position: center;
+  background-size: cover;
+  height: 245px;
+  p {
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.20);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 49px;
+    height: 245px;
+  }
+}
+.list-items {
+  margin: 0 4em;
+  .box {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 140px;
+    margin-bottom: 30px;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .img {
+          width: 50px;
+          height: 50px;
+        }
+        .jobsImg {
+          width: 100px;
+          height: 45px;
+        }
+        h5 {
+          font-size: 16px;
+          color: $mainColor;
+          text-shadow: 0px 0px 1px #E22;
+          font-weight: 500;
+        }
+      }
+      .new {
+        .img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .body {
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28.8px;
+      }
+    }
+  }
+  .advertisements {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    .item-box {
+      display: flex;
+      padding: 20px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      border-radius: 10px;
+      border: 1px solid #E0E0E0;
+      background-color: #fff;
+      .header {
+        h4 {
+          color: $mainBlackColor;
+          font-size: 18px;
+          text-align: center;
+          font-weight: 700;
+          width: 80%;
+          margin: auto;
+        }
+      }
+      .box-img {
+        .img {
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+  }
+  .guide {
+    h3 {
+      color: $mainColor;
+      text-shadow: 0px 0px 1px #23BDEE;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .box {
+      min-height: auto;
+    }
+  }
+  .border-white-box {
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
+    background: #FFF;
+    padding: 15px 20px;
+    p {
+      font-weight: 700;
+      line-height: 28px;
+      font-size: 16px;
+      color: $mainBlackColor;
+    }
+  }
+  .models-and-requests {
+    h3 {
+      color: $mainColor;
+      font-size: 25px;
+      text-shadow: 0px 0px 1px #23BDEE;
+      text-align: center;
+      font-weight: 700;
+      line-height: 35px;
+    }
+    .green-border-box {
+      border-radius: 10px;
+      border-left: 8px solid $mainGreenColor;
+      background: #FFF;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-weight: 700;
+        line-height: 28px;
+        font-size: 16px;
+        color: $mainBlackColor;
+      }
+    }
+  }
+}

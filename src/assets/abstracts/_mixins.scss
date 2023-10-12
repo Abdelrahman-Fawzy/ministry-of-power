@@ -1,0 +1,16 @@
+@import '../abstracts/variables';
+
+@mixin mainButton ($color, $text-color, $width, $padding, $border-radius) {
+  background-color: $color;
+  color: $text-color;
+  font-size: 16px;
+  padding: $padding;
+  width: $width;
+  border: none;
+  border-radius: $border-radius;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 1;
+  transition: all 150ms ease-in-out;
+}

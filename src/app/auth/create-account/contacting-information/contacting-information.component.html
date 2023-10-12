@@ -1,0 +1,106 @@
+<div class="stepsdemo-content">
+  <div class="container-white-box flex flex-col gap-25 my-40">
+    <div class="header">
+      <h5>اختر نوع الحساب الذى تريد إنشاءة</h5>
+    </div>
+    <div class="body flex flex-col gap-20">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group">
+            <label for="companyAddress">عنوان الشركة</label>
+            <textarea name="" id="companyAddress" rows="5" class="form-control" placeholder="اكتب عنوان الشركة بالكامل"></textarea>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="name">البريد الالكترونى</label>
+                <div class="iconic-form-control">
+                  <div class="img">
+                    <img src="assets/images/icons/envelope.svg" alt="">
+                  </div>
+                  <input type="text" id="name" placeholder="hussain@finesse.com">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="name">فاكس</label>
+                <div class="iconic-form-control">
+                  <div class="img">
+                    <img src="assets/images/icons/fax.svg" alt="">
+                  </div>
+                  <input type="text" id="name" placeholder="654654153">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="name">رقم الهاتف</label>
+                <div class="iconic-form-control">
+                  <div class="img">
+                    <img src="assets/images/icons/black_phone.svg" alt="">
+                  </div>
+                  <input type="text" id="name" placeholder="01158202283">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label for="name">رقم التأكيد</label>
+                <div class="iconic-form-control">
+                  <ul class="list-unstyled flex jc-sb full-width">
+                    <li>4</li>
+                    <div class="divider"></div>
+                    <li>4</li>
+                    <div class="divider"></div>
+                    <li>8</li>
+                    <div class="divider"></div>
+                    <li>7</li>
+                    <div class="divider"></div>
+                    <li>3</li>
+                    <div class="divider"></div>
+                    <li>5</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="form-group">
+            <div class="custom-file-upload">
+              <label class="mainLabel">
+                <span>شعار الشركة</span>
+                <img src="assets/images/icons/black_hint.svg" alt="">
+              </label>
+              <div class="flex ai-c gap-15 full-width">
+                <div class="upload-box">
+                  <div class="upload center-flex">
+                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <label for="companyContract">اختر الملف</label>
+                  </div>
+                  <div class="file-info">
+                    <span id="file-chosen">File Name.pdf</span>
+                    <div class="img">
+                      <img src="assets/images/icons/pdf.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-flex gap-15 mb-3">
+    <p-button class="previous-stepper" label="السابق" (onClick)="prevPage()" icon="pi pi-angle-right"></p-button>
+    <p-button class="next-stepper" label="التالى" (onClick)="nextPage()" icon="pi pi-angle-left"
+      iconPos="right"></p-button>
+  </div>
+</div>

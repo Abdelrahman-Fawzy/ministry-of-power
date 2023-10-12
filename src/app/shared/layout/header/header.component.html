@@ -1,0 +1,113 @@
+<div class="small-nav py-5">
+    <ul class="list-unstyled center-flex">
+        <li class="phone">
+            <div class="img">
+                <img src="assets/images/icons/white_phone.svg" alt="phone">
+            </div>
+            <div class="text">
+                <p>الخط الساخن : 19468</p>
+            </div>
+        </li>
+        <li class="email">
+            <div class="img">
+                <img src="assets/images/icons/white_envelope.svg" alt="email">
+            </div>
+            <div class="text">
+                <p>البريد الالكترونى : emai@email.com</p>
+            </div>
+        </li>
+        <li class="social">
+            <ul class="list-unstyled flex gap-15">
+                <li>
+                    <div class="img">
+                        <img src="assets/images/icons/white_twitter.svg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src="assets/images/icons/white_youtube.svg" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="img">
+                        <img src="assets/images/icons/white_facebook.svg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<nav class="navbar navbar-expand-xl navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/main_assets/logo.svg" alt="logo">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse jc-sb" id="navbarSupportedContent">
+    <ul class="navbar-nav gap-20">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="''" [routerLinkActive]="'routerActive'" [routerLinkActiveOptions]="{exact: true}">
+          الصفحة الرئيسية
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          عن الوزارة
+          <span class="caret"></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          الاخبار
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          خدمات الوزراة
+          <span class="caret"></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          انشطة الوزراة
+          <span class="caret"></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          المديريات
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          تشريعات
+        </a>
+      </li>
+    </ul>
+    <div class="actions flex ai-c gap-30">
+      <div class="notifications position-relative center-flex">
+        <div class="img">
+          <img src="assets/images/icons/notifiaction.svg" alt="notifications">
+        </div>
+        <span class="notifications-count center-flex">5</span>
+      </div>
+      <div class="user-account flex ai-c gap-20">
+        <div class="user-info">
+          <h4>اكاديمية 6 أكتوبر</h4>
+          <h5>
+            <a routerLink="/auth/login">تسجيل الدخول</a>
+          </h5>
+        </div>
+        <div class="user-img center-flex">
+          <div class="img">
+            <img src="assets/images/main_assets/academy_logo.svg" alt="academy-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
