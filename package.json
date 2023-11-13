@@ -21,6 +21,8 @@
     "bootstrap": "^4.6.1",
     "ngx-bootstrap": "^11.0.2",
     "ngx-slick-carousel": "^15.0.0",
+    "ngx-spinner": "^16.0.2",
+    "ngx-toastr": "^17.0.2",
     "primeicons": "^6.0.1",
     "primeng": "^16.4.1",
     "rxjs": "~7.8.0",

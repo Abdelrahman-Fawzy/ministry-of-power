@@ -11,14 +11,15 @@ import { ConfirmationComponent } from './create-account/confirmation/confirmatio
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: CreateAccountComponent,
-      children: [
-        { path: 'account-type', component: AccountTypeComponent },
-        { path: 'contacting-information', component: ContactingInformationComponent },
-        { path: 'required-attachments', component: RequiredAttachmentsComponent },
-        { path: 'create-password', component: CreatePasswordComponent },
-        { path: 'confirmation', component: ConfirmationComponent },
-        { path: 'signup', redirectTo: 'account-type', pathMatch: 'full' },
-    ]},
+    children: [
+      { path: 'account-type', component: AccountTypeComponent },
+      { path: 'contacting-information', component: ContactingInformationComponent },
+      { path: 'required-attachments', component: RequiredAttachmentsComponent },
+      { path: 'create-password', component: CreatePasswordComponent },
+      { path: 'confirmation', component: ConfirmationComponent },
+      { path: 'signup', redirectTo: 'account-type', pathMatch: 'full' },
+    ]
+  },
 ];
 
 @NgModule({

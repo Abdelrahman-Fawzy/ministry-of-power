@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AccountType } from 'src/app/shared/enums/accounts.enums';
+import { CreateAccountService } from 'src/app/shared/services/create-account.service';
 
 @Component({
   selector: 'app-account-type',
@@ -8,11 +11,26 @@ import { Router } from '@angular/router';
 })
 export class AccountTypeComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  isChecked: boolean = false;
+  accountTypeInformation: any;
+  accountTypes = AccountType
 
-  ngOnInit() {}
+  constructor(private router: Router, private accountService: CreateAccountService, private toastr: ToastrService) {
+    this.accountTypeInformation = this.accountService.getAccountInformation().accountTypeInformation;
+  }
+
+  ngOnInit() {
+    console.log(this.accountTypeInformation);
+    
+  }
 
   nextPage() {
+    if (this.accountTypeInformation.AccountType != 0) {
+      this.accountService.createAccount.accountTypeInformation = this.accountTypeInformation
       this.router.navigate(['signup/contacting-information']);
+      return;
+    } else {
+      this.toastr.error('يجب إختيار النوع')
+    }
   }
 }

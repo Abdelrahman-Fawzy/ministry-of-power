@@ -8,7 +8,7 @@
         <div class="col-lg-4">
           <div class="form-group">
             <label for="companyAddress">عنوان الشركة</label>
-            <textarea name="" id="companyAddress" rows="5" class="form-control" placeholder="اكتب عنوان الشركة بالكامل"></textarea>
+            <textarea name="" id="companyAddress" rows="5" class="form-control" [(ngModel)]="contactInformation.Address" placeholder="اكتب عنوان الشركة بالكامل"></textarea>
           </div>
         </div>
         <div class="col-lg-8">
@@ -20,7 +20,7 @@
                   <div class="img">
                     <img src="assets/images/icons/envelope.svg" alt="">
                   </div>
-                  <input type="text" id="name" placeholder="hussain@finesse.com">
+                  <input type="text" id="name" placeholder="hussain@finesse.com" [(ngModel)]="contactInformation.WorkEmail">
                 </div>
               </div>
             </div>
@@ -31,7 +31,7 @@
                   <div class="img">
                     <img src="assets/images/icons/fax.svg" alt="">
                   </div>
-                  <input type="text" id="name" placeholder="654654153">
+                  <input type="text" id="name" placeholder="654654153" [(ngModel)]="contactInformation.FaxNumber">
                 </div>
               </div>
             </div>
@@ -42,7 +42,7 @@
                   <div class="img">
                     <img src="assets/images/icons/black_phone.svg" alt="">
                   </div>
-                  <input type="text" id="name" placeholder="01158202283">
+                  <input type="text" id="name" placeholder="01158202283" [(ngModel)]="contactInformation.PhoneNumber">
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@
               <div class="flex ai-c gap-15 full-width">
                 <div class="upload-box">
                   <div class="upload center-flex">
-                    <input id="companyContract" (change)="getFileName($event)" type="file" hidden>
+                    <input id="companyContract" (change)="handleFileInput($event)" type="file" hidden>
                     <label for="companyContract">اختر الملف</label>
                   </div>
                   <div class="file-info">

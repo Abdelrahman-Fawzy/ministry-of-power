@@ -18,3 +18,44 @@
     color: $mainBlackColor;
   }
 }
+
+.checkboxContainer {
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked ~ .checkmark {
+      background-color: $mainGreenColor;
+      span {
+        color: #FFF
+      }
+    }
+    &:disabled ~ .checkmark {
+      cursor: not-allowed;
+    }
+  }
+  .checkmark {
+    position: relative;
+    top: 0;
+    width: 148px;
+    height: 148px;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 10px 14px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12), 0px 0px 0px 1px rgba(103, 110, 118, 0.16), 0px 2px 5px 0px rgba(103, 110, 118, 0.08);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    span {
+      font-size: 20px;
+      font-weight: 700;
+      color: $mainBlackColor;
+      text-align: center;
+      display: block;
+    }
+    cursor: pointer;
+  }
+}

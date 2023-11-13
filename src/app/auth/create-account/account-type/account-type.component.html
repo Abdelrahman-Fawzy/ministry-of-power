@@ -6,44 +6,59 @@
     <div class="body">
       <ul class="list-unstyled flex jc-sb">
         <li>
-          <div class="box">
-            <div class="img">
-              <img src="assets/images/icons/user.svg" alt="">
+          <label class="checkboxContainer">
+            <input type="radio" name="accountType" id="" [value]="accountTypes.Special" [(ngModel)]="accountTypeInformation.AccountType">
+            <div class="checkmark">
+              <div class="img">
+                <img src="assets/images/icons/user.svg" alt="">
+              </div>
+              <span>خاص</span>
             </div>
-            <span>خاص</span>
-          </div>
+          </label>
         </li>
         <li>
-          <div class="box">
-            <div class="img">
-              <img src="assets/images/icons/governorate.svg" alt="">
+          <label class="checkboxContainer">
+            <input type="radio" name="accountType" id="" [value]="accountTypes.Governmental" [(ngModel)]="accountTypeInformation.AccountType">
+            <div class="checkmark">
+              <div class="img">
+                <img src="assets/images/icons/governorate.svg" alt="">
+              </div>
+              <span>حكومى</span>
             </div>
-            <span>حكومى</span>
-          </div>
+          </label>
         </li>
         <li>
-          <div class="box">
-            <div class="img">
-              <img src="assets/images/icons/building.svg" alt="">
+          <label class="checkboxContainer">
+            <input type="radio" name="accountType" id="" [value]="accountTypes.Unions" disabled [(ngModel)]="accountTypeInformation.AccountType">
+            <div class="checkmark">
+              <div class="img">
+                <img src="assets/images/icons/building.svg" alt="">
+              </div>
+              <span>نقابات</span>
             </div>
-            <span>نقابات</span>
-          </div>
+          </label>
         </li>
         <li>
-          <div class="box">
-            <div class="img">
-              <img src="assets/images/icons/users.svg" alt="">
+          <label class="checkboxContainer">
+            <input type="radio" name="accountType" id="" [value]="accountTypes.Associations" disabled [(ngModel)]="accountTypeInformation.AccountType">
+            <div class="checkmark">
+              <div class="img">
+                <img src="assets/images/icons/users.svg" alt="">
+              </div>
+              <span>جمعيات</span>
             </div>
-            <span>جمعيات</span>
-          </div>
+          </label>
         </li>
         <li>
-          <div class="box">
-            <div class="img">
-              <img src="assets/images/icons/trainer.svg" alt="">
+          <label class="checkboxContainer">
+            <input type="radio" name="accountType" id="" [value]="accountTypes.Trainer" [(ngModel)]="accountTypeInformation.AccountType">
+            <div class="checkmark">
+              <div class="img">
+                <img src="assets/images/icons/trainer.svg" alt="">
+              </div>
+              <span>مدرب</span>
             </div>
-            <span>مدرب</span>
-          </div>
+          </label>
         </li>
       </ul>
     </div>

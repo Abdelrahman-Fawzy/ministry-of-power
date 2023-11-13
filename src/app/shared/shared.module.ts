@@ -17,7 +17,7 @@ import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CheckboxModule } from 'primeng/checkbox';
-
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -30,6 +30,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     CommonModule,
     RouterModule,
     SlickCarouselModule,
+    HttpClientModule,
     StepsModule,
     ButtonModule,
     InputMaskModule,
@@ -50,6 +51,7 @@ import { CheckboxModule } from 'primeng/checkbox';
     LayoutComponent,
     RouterModule,
     SlickCarouselModule,
+    HttpClientModule,
     StepsModule,
     ButtonModule,
     InputMaskModule,

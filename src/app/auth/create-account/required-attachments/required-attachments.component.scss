@@ -13,3 +13,17 @@
 .files { gap: 122px; }
 
 .custom-file-upload { margin-bottom: 2em; }
+
+.attachments {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0px;
+  .attachment {
+    width: 45%;
+  }
+}
+
+.status {
+  display: none;
+}

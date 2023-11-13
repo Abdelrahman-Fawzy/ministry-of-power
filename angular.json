@@ -35,6 +35,8 @@
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/slick-carousel/slick/slick.scss",
               "node_modules/slick-carousel/slick/slick-theme.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
               "src/styles.scss"
             ],
             "scripts": [

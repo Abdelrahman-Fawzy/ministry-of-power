@@ -9,6 +9,10 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoaderInterceptor } from './shared/interceptors/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -21,9 +25,19 @@ import { RouterModule } from '@angular/router';
     AuthModule,
     HomeModule,
     SharedModule,
+    ToastrModule.forRoot({
+      positionClass: 'toast-bottom-right'
+    }),
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

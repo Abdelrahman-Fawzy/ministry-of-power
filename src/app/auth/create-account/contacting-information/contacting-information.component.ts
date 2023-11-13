@@ -1,23 +1,51 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { CreateAccountService } from 'src/app/shared/services/create-account.service';
 
 @Component({
   selector: 'app-contacting-information',
   templateUrl: './contacting-information.component.html',
   styleUrls: ['./contacting-information.component.scss']
 })
-export class ContactingInformationComponent {
+export class ContactingInformationComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  contactInformation: any;
 
-  getFileName(event: any) {
-    const fileChosen = document.getElementById('file-chosen');
+  constructor(private router: Router, private accountService: CreateAccountService, private toastr: ToastrService) {
+    this.contactInformation = this.accountService.getAccountInformation().contactInformation;
+  }
 
-    fileChosen!.textContent = event.target.files[0].name;
+  ngOnInit(): void {
+  }
+
+  handleFileInput(event: any) {
+    const logo = document.getElementById('file-chosen');
+    logo!.textContent = event.target.files[0].name;
+
+    var files = event.target.files as FileList;
+    let file = files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      this.contactInformation.LogoImage = file
+    };
   }
 
   nextPage() {
-    this.router.navigate(['signup/required-attachments']);
+    if (!this.accountService.getAccountInformation().accountTypeInformation.AccountType) {
+      this.toastr.error('يجب اختيار نوع الحساب من الخطوة السابقة')
+    } else if (
+      this.contactInformation.Address && 
+      this.contactInformation.WorkEmail && 
+      this.contactInformation.FaxNumber && 
+      this.contactInformation.PhoneNumber) {
+        this.accountService.createAccount.contactInformation = this.contactInformation
+        this.router.navigate(['signup/required-attachments']);
+        return;
+    } else {
+      this.toastr.error('يجب استكمال البيانات')
+    }
 }
 
   prevPage() {

@@ -20,7 +20,36 @@
       </div>
     </div>
     <div class="body">
-      <div class="files flex jc-sb">
+      <div class="attachments" *ngIf="attachmentsList?.data.length > 0">
+        <div class="attachment" *ngFor="let attach of attachmentsList?.data">
+          <div class="custom-file-upload">
+            <label class="mainLabel">
+              <span>{{attach.name}}</span>
+              <img src="assets/images/icons/black_hint.svg" alt="">
+            </label>
+            <div class="flex ai-c gap-15 full-width">
+              <div class="upload-box">
+                <div class="upload center-flex">
+                  <input [id]="attach.name" (change)="handleFileInput(attach, $event)" type="file" hidden>
+                  <label [for]="attach.name">اختر الملف</label>
+                </div>
+                <div class="file-info">
+                  <span [id]="attach.name + '-chosen'">File Name.pdf</span>
+                  <div class="img">
+                    <img src="assets/images/icons/pdf.svg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="status" [id]="attach.name + '-choosed'">
+                <div class="img">
+                  <img src="assets/images/icons/green_confirm.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="files flex jc-sb">
         <div class="part-one full-width">
           <div class="custom-file-upload">
             <label class="mainLabel">
@@ -375,7 +404,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 

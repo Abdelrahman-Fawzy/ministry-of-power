@@ -13,7 +13,9 @@
                 <img src="assets/images/icons/white_envelope.svg" alt="email">
             </div>
             <div class="text">
-                <p>البريد الالكترونى : emai@email.com</p>
+                <p>البريد الالكترونى : 
+                  <span>emailemail.com</span>
+                </p>
             </div>
         </li>
         <li class="social">
@@ -95,16 +97,31 @@
         </div>
         <span class="notifications-count center-flex">5</span>
       </div>
-      <div class="user-account flex ai-c gap-20">
+      <div class="user-account flex ai-c gap-20" *ngIf="currentUser$ | async as User">
         <div class="user-info">
-          <h4>اكاديمية 6 أكتوبر</h4>
+          <h4>{{User.user.name}}</h4>
           <h5>
-            <a routerLink="/auth/login">تسجيل الدخول</a>
+            <a (click)="logOut()">تسجيل الخروج</a>
           </h5>
         </div>
         <div class="user-img center-flex">
           <div class="img">
             <img src="assets/images/main_assets/academy_logo.svg" alt="academy-logo">
+          </div>
+        </div>
+      </div>
+      <div class="user-account flex ai-c gap-20" *ngIf="(currentUser$ | async) === null">
+        <div class="user-info">
+          <h5>
+            <a routerLink="/auth/login">تسجيل الدخول</a>
+          </h5>
+          <h5>
+            <a routerLink="/auth/signup">انشاء حساب</a>
+          </h5>
+        </div>
+        <div class="user-img center-flex">
+          <div class="img">
+            <img src="assets/images/dummy.svg" alt="dummy">
           </div>
         </div>
       </div>
